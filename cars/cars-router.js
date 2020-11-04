@@ -59,7 +59,7 @@ router.delete('/:id', (req, res) => {
     const { id } = req.params
     db('cars').where({id}).del()
     .then(() => {
-        res.status(200).json({message: 'account has been deleted'})
+        res.status(200).json({message: 'car has been deleted'})
     })
     .catch(error => {
         res.status(500).json({message: error.message})
